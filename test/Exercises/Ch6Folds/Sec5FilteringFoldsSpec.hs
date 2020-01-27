@@ -50,8 +50,12 @@ spec = do
       it "filtered" $ deck ^.. folded . name . filtered ((== 'S') . head)
         `shouldBe` result
 
-      xit "filteredBy" $ deck ^.. folded . name -- . filteredBy
-        `shouldBe` result
+      it "filteredBy" $
+        deck ^..
+          folded .
+          name .
+          filteredBy (taking 1 folded . only 'S')
+          `shouldBe` result
 
     it "What’s the lowest attack power of all moves?" $
       minimumOf (folded . moves . folded . movePower) deck
@@ -60,16 +64,21 @@ spec = do
     describe "What’s the name of the first card which has more than one move?" do
       let result = Just "Kapichu"
       it "filtered" $
-        firstOf (folded . filtered ((> 1) . length . _moves) . name) deck
+        deck ^? folded . filtered ((> 1) . length . _moves) . name
           `shouldBe` result
 
       it "filteredBy" $
-        firstOf (folded . filteredBy (moves . filtered ((> 1) . length)) . name) deck
+        deck ^? folded . filteredBy (moves . filtered ((> 1) . length)) . name
           `shouldBe` result
 
-    it "Are there any Hot cards with a move with more than 30 attack power?" $
-      anyOf (folded . moves . folded . movePower) (> 30) deck
-        `shouldBe` True
+    describe "Are there any Hot cards with a move with more than 30 attack power?" do
+      it "filtered" $
+        anyOf (folded . filtered ((== Hot) . _aura) . moves . folded . movePower) (> 30) deck
+          `shouldBe` True
+
+      it "filteredBy" $
+        anyOf (folded . filteredBy (aura . only Hot) . moves . folded . movePower) (> 30) deck
+          `shouldBe` True
 
     describe "List the names of all holographic cards with a Wet aura." do
       let result = [ "Garydose" ]
