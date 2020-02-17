@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fno-warn-type-defaults #-}
+
 module Exercises.Ch6Folds.Sec5FilteringFoldsSpec where
 
 import Test.Hspec

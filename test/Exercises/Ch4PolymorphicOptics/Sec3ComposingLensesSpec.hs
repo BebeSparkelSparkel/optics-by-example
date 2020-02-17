@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fno-warn-type-defaults #-}
+
 module Exercises.Ch4PolymorphicOptics.Sec3ComposingLensesSpec where
 
 import Control.Lens

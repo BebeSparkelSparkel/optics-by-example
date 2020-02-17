@@ -58,10 +58,15 @@ spec = do
       let r = (2, (3, [4, 5]))
       (d & beside id (beside id traversed) +~ 1) `shouldBe` r
 
-    it "H" do
+    describe "H" do
       let d = ((True, "Strawberries"), (False, "Blueberries"), (True, "Blackberries"))
       let r = ((True, "STRAWberries"), (False, "Blueberries"), (True, "BLACKberries"))
-      (d & each . filtered fst . _2 . takingWhile (/= 'b') traversed %~ toUpper) `shouldBe` r
+
+      it "filtered" $
+        (d & each . filtered fst . _2 . takingWhile (/= 'b') traversed %~ toUpper) `shouldBe` r
+
+      it "filteredBy" $
+        (d & each . filteredBy (_1 . only True) . _2 . takingWhile (/= 'b') traversed %~ toUpper) `shouldBe` r
 
     it "I" do
       let d = ((True, "Strawberries"), (False, "Blueberries"), (True, "Blackberries"))

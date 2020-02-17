@@ -1,4 +1,4 @@
-resolver: lts-14.21
+resolver: lts-14.22
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -14,11 +14,6 @@ packages:
 # Dependency packages to be pulled from upstream that are not in the resolver.
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
-#
-# extra-deps:
-# - acme-missiles-0.3
-# - git: https://github.com/commercialhaskell/stack.git
-#   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
 extra-deps:
 - lens-4.18.1@sha256:5c21912d5af370ae608a7e010c8a705e987e42e89bbed306de73f87166251c27,15419

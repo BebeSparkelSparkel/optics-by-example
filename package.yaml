@@ -20,18 +20,20 @@ extra-source-files:
 description:         Please see the README on GitHub at <https://github.com/githubuser/optics-exercises#readme>
 
 dependencies:
-- base >= 4.7 && < 5
+- QuickCheck
 - aeson
+- barbies
+- base >= 4.7 && < 5
 - containers
+- hspec
 - lens >= 4.18.0
 - lens-aeson
 - mtl
+- smallcheck
 - text
-- QuickCheck
-- hspec
-- utility-ht
-- barbies
 - transformers
+- utility-ht
+- hspec-smallcheck
 
 default-extensions:
 - BlockArguments
@@ -55,6 +57,10 @@ default-extensions:
 - UndecidableInstances
 - ViewPatterns
 - NamedFieldPuns
+- MultiParamTypeClasses
+- GeneralizedNewtypeDeriving
+- DeriveFunctor
+- AllowAmbiguousTypes
 
 library:
   source-dirs: src

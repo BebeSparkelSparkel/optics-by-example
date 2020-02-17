@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fno-warn-type-defaults #-}
+
 module Exercises.Ch5Operators.Sec9ExercisesOperatorsSpec where
 
 import Test.Hspec
