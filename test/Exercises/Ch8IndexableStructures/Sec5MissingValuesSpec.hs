@@ -9,7 +9,7 @@ default (Int)
 
 
 spec :: Spec
-spec = focus do
+spec = do
   describe "1. Write an optic which focuses the value at key “first” or, failing that, the value at key “second”." do
     let optic = ix "first" `failing` ix "second"
     it "A" do

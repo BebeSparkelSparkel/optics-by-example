@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fno-warn-type-defaults #-}
+
 module Exercises.Ch8IndexableStructures.Sec3InsertingAndDeletingWithAtSpec where
 
 import Test.Hspec

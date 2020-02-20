@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -fno-warn-type-defaults #-}
-module Exercises.Ch7Traversals.Sec7AdvancedManipulation where
+module Exercises.Ch7Traversals.Sec7AdvancedManipulationSpec where
 
 import Test.Hspec
 import Control.Lens
@@ -19,7 +19,7 @@ spec = do
     it "B" do
       let answer = ["Aardvark", "Bandicoot", "Capybara"]
             ^. traversed . partsOf (taking 3 traversed)
-      let fillIn = "AarBanCop"
+      let fillIn = "AarBanCap"
       fillIn `shouldBe` answer
 
     it "C" do
