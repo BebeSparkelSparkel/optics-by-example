@@ -34,6 +34,7 @@ dependencies:
 - transformers
 - utility-ht
 - hspec-smallcheck
+- case-insensitive
 
 default-extensions:
 - BlockArguments
@@ -61,6 +62,7 @@ default-extensions:
 - GeneralizedNewtypeDeriving
 - DeriveFunctor
 - AllowAmbiguousTypes
+- ExtendedDefaultRules
 
 library:
   source-dirs: src

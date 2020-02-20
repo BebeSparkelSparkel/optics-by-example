@@ -31,11 +31,11 @@ spec = do
     it "consistentFocuses" $ expectFailure $ consistentFocuses @Identity @Identity t
 
   -- describe "4. For each of the following traversals, decide whether you think it’s lawful or not. If they’re unlawful come up with a counter-example for one of the laws." do
-  --   describe "taking" do
-      -- it "respectPurity" $ property \n ->
-      --   respectPurity @Identity (taking n :: Traversal' [Word] Word)
-      -- it "consistentFocuses" $ property \n ->
-      --   consistentFocuses @Identity @Identity (taking n :: Traversal' [Word] Word)
+    -- describe "taking" do
+    --   it "respectPurity" $ property \n ->
+    --     respectPurity @Identity (taking n :: Traversal' [Word] Word)
+    --   it "consistentFocuses" $ property \n ->
+    --     consistentFocuses @Identity @Identity (taking n :: Traversal' [Word] Word)
 
     -- describe "beside" do
     --   it "respectPurity" $ respectPurity @Identity beside

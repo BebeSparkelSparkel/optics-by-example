@@ -2,7 +2,7 @@ module Exercises.Ch3Lenses.Sec7DataCorrectionAndMaintainingInvariantsSpec where
 
 import CheckLens
 import Control.Lens
-import Data.Barbie
+import Barbies
 import Data.Kind (Constraint)
 import GHC.Generics
 import Test.Hspec

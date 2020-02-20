@@ -1,4 +1,4 @@
-resolver: lts-14.22
+resolver: lts-15.0
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -16,8 +16,7 @@ packages:
 # forks / in-progress versions pinned to a git hash. For example:
 #
 extra-deps:
-- lens-4.18.1@sha256:5c21912d5af370ae608a7e010c8a705e987e42e89bbed306de73f87166251c27,15419
-- type-equality-1@sha256:aeb9c44abf5d2edf52caff114a7da565d8328fa84bbe194828e4355ea85bf5b3,1457
+- barbies-2.0.0.0@sha256:673a2554477aafb79f6836e3f2c00cb2f1309d205985a5151ec818a5186b3a60,4233
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
