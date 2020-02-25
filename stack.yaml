@@ -1,4 +1,4 @@
-resolver: lts-15.0
+resolver: lts-15.1
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.

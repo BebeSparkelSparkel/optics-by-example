@@ -13,7 +13,7 @@ import Data.Char
 default (Int)
 
 spec :: Spec
-spec = focus do
+spec = do
   describe "1. Implement the _Contains prism and determine whether it’s lawful. It should match on sets which contain the provided element! Reviewing adds the element to the set." do
     let _Contains :: forall a. Ord a => a -> Prism' (S.Set a) (S.Set a)
         _Contains x = prism' embed match
