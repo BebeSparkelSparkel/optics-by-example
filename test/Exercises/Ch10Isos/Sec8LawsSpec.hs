@@ -12,7 +12,7 @@ default (Int)
 
 
 spec :: Spec
-spec = focus do
+spec = do
   it "1. The following iso is unlawful; provide a counter example which shows that it breaks the law." do
     let mapList :: Ord k => Iso' (M.Map k v) [(k, v)]
         mapList = iso M.toList M.fromList
